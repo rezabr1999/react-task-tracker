@@ -2,20 +2,19 @@ export const TaskReducer = (state, action) => {
   switch (action.type) {
     case "add":
       return [...state, action.task];
-      break;
 
     case "delete":
-      return state.filter((task) => task.id !== action.id);
-      break;
+      return state.filter((task) => task.id !== action.task.id);
 
     case "update":
-      return state.map((task) => {
-        if (task.id === action.task.id) {
-          return action.task;
-        } else {
-          return task;
-        }
-      });
+      return state.map((task) =>
+        task.id === action.task.id ? action.task : task
+      );
+
+    case "check":
+      return state.map((task) =>
+        task.id === action.task.id ? { ...task, done: !task.done } : task
+      );
       break;
 
     default:
