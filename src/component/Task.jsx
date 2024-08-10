@@ -1,13 +1,22 @@
 import { useState } from "react";
+import { useTaskDispatch } from "../context/TaskContext";
 
-export default function Task({
-  task,
-  handleDelete,
-  handleUpdate,
-  handleCheck,
-}) {
+export default function Task({ task }) {
+  const dispatch = useTaskDispatch();
   const [isEditing, setIsEditing] = useState(false);
   const [updatedText, setUpdatedText] = useState(task.text);
+
+  const handleDelete = (task) => {
+    dispatch({ type: "delete", task: task });
+  };
+
+  const handleUpdate = (updatedTask) => {
+    dispatch({ type: "update", task: updatedTask });
+  };
+
+  const handleCheck = (task) => {
+    dispatch({ type: "check", task: task });
+  };
 
   const onUpdateClick = () => {
     handleUpdate({ ...task, text: updatedText });
