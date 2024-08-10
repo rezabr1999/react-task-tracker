@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useTaskDispatch } from "../context/TaskContext";
+import Edit from "./Edit";
 
 export default function Task({ task }) {
   const dispatch = useTaskDispatch();
@@ -30,22 +31,11 @@ export default function Task({ task }) {
   return (
     <div className="border rounded-md bg-slate-200">
       {isEditing ? (
-        <div className="flex rounded-md">
-          <input
-            className="flex-1 p-5 outline-none justify-between items-center"
-            type="text"
-            value={updatedText}
-            onChange={(e) => setUpdatedText(e.target.value)}
-          />
-          <div className="flex items-center px-3">
-            <button
-              className="bg-green-600 px-4 py-2 rounded-md text-white w-32"
-              onClick={onUpdateClick}
-            >
-              Save
-            </button>
-          </div>
-        </div>
+        <Edit
+          updatedTask={updatedText}
+          onEdit={setUpdatedText}
+          onUpdate={onUpdateClick}
+        />
       ) : (
         <div className="flex justify-between items-center w-full flex-1 p-5">
           <p>{task.text}</p>
