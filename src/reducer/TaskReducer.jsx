@@ -1,21 +1,28 @@
 export const TaskReducer = (state, action) => {
   switch (action.type) {
     case "add":
-      return [...state, action.task];
+      const addedItems = [...state, action.task];
+      localStorage.setItem("tasks", JSON.stringify(addedItems));
+      return addedItems;
 
     case "delete":
-      return state.filter((task) => task.id !== action.task.id);
+      const deletedItems = state.filter((task) => task.id !== action.task.id);
+      localStorage.setItem("tasks", JSON.stringify(deletedItems));
+      return deletedItems;
 
     case "update":
-      return state.map((task) =>
+      const updatedItems = state.map((task) =>
         task.id === action.task.id ? action.task : task
       );
+      localStorage.setItem("tasks", JSON.stringify(updatedItems));
+      return updatedItems;
 
     case "check":
-      return state.map((task) =>
+      const checkedItems = state.map((task) =>
         task.id === action.task.id ? { ...task, done: !task.done } : task
       );
-      break;
+      localStorage.setItem("tasks", JSON.stringify(checkedItems));
+      return checkedItems;
 
     default:
       return state;

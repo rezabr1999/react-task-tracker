@@ -5,7 +5,9 @@ const TaskContext = createContext();
 const TaskDispatchContext = createContext();
 
 export default function TaskProvider({ children }) {
-  const [tasks, tasksDispatch] = useReducer(TaskReducer, []);
+  const initialItems = JSON.parse(localStorage.getItem("tasks")) || [];
+
+  const [tasks, tasksDispatch] = useReducer(TaskReducer, initialItems);
   return (
     <TaskContext.Provider value={tasks}>
       <TaskDispatchContext.Provider value={tasksDispatch}>
