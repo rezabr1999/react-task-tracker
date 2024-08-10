@@ -21,14 +21,23 @@ export default function Form() {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form
+      onSubmit={handleSubmit}
+      className="flex gap-2 w-full"
+    >
       <input
+        className="px-7 py-2 border-2 rounded-md focus:border-teal outline-none flex-1"
         type="text"
         value={taskText}
         onChange={(e) => setTaskText(e.target.value)}
         placeholder="Enter task"
       />
-      <button type="submit">Add Task</button>
+      <button
+        className="px-7 py-2 bg-indigo-700 rounded-md text-white "
+        type="submit"
+      >
+        Add Task
+      </button>
     </form>
   );
 }

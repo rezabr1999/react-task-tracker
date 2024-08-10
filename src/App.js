@@ -11,9 +11,11 @@ function App() {
   console.log(tasks);
 
   return (
-    <div className="App">
-      <Form />
-      <TaskList tasks={tasks} />
+    <div className="p-5 bg-slate-100 min-h-screen">
+      <div className="flex flex-col gap-10 max-w-3xl mx-auto">
+        <Form />
+        <TaskList tasks={tasks} />
+      </div>
     </div>
   );
 }

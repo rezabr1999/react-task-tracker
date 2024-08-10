@@ -17,7 +17,7 @@ export default function TaskList({ tasks }) {
   };
 
   return (
-    <div>
+    <div className="flex flex-col gap-6">
       {tasks.map((task) => (
         <Task
           key={task.id}
