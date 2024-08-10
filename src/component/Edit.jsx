@@ -1,6 +1,6 @@
 export default function Edit({ updatedTask, onEdit, onUpdate }) {
   return (
-    <div className="flex rounded-md">
+    <div className="flex rounded-md bg-white p-2">
       <input
         className="flex-1 p-5 outline-none justify-between items-center"
         type="text"
