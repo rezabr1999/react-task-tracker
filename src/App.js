@@ -24,7 +24,7 @@ function App() {
         <div className="flex flex-col gap-10 max-w-3xl mx-auto">
           <button
             onClick={changeTheme}
-            className="py-2 text-center border-black bg-indigo-700 dark:bg-lime-600 rounded-full text-white w-52"
+            className="py-2 text-center border-black bg-indigo-700 dark:bg-lime-600 rounded-lg text-white w-52"
           >
             {theme === "light" ? "Dark Mode" : "Light Mode"}
           </button>
