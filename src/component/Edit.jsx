@@ -1,8 +1,8 @@
 export default function Edit({ updatedTask, onEdit, onUpdate }) {
   return (
-    <div className="flex rounded-md bg-white flex-col p-5 ">
+    <div className="flex rounded-md bg-white flex-col p-5 dark:bg-slate-600  ">
       <input
-        className="flex-1 p-5 outline-none justify-between items-center"
+        className="flex-1 p-5 outline-none justify-between items-center dark:bg-slate-600"
         type="text"
         value={updatedTask}
         onChange={(e) => onEdit(e.target.value)}
