@@ -26,14 +26,14 @@ export default function Form() {
       className="flex gap-2 w-full"
     >
       <input
-        className="px-7 py-2 border-2 rounded-md focus:border-teal outline-none flex-1"
+        className="px-7 py-2 border-2 rounded-md focus:border-teal outline-none flex-1 dark:bg-slate-700 dark:border-slate-700 dark:text-white"
         type="text"
         value={taskText}
         onChange={(e) => setTaskText(e.target.value)}
         placeholder="Enter task"
       />
       <button
-        className="px-7 py-2 bg-indigo-700 rounded-md text-white "
+        className="px-7 py-2 bg-indigo-700 dark:bg-indigo-500 rounded-md text-white "
         type="submit"
       >
         Add Task

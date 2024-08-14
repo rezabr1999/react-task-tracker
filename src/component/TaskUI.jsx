@@ -1,3 +1,8 @@
+import { IoCheckbox } from "react-icons/io5";
+import { IoSquareOutline } from "react-icons/io5";
+import { FaTrashAlt } from "react-icons/fa";
+import { FaEdit } from "react-icons/fa";
+
 export default function TaskUI({
   task,
   handleCheck,
@@ -9,28 +14,31 @@ export default function TaskUI({
     : "px-4 py-2  bg-red-500 rounded-md flex-1";
 
   return (
-    <div className="flex justify-between flex-col gap-4 items-center w-full flex-1 p-5">
-      <p className="w-full p-4">{task.text}</p>
-
-      <div className="flex gap-3 w-full">
-        <button
-          className={doneClass}
+    <div className="flex justify-between gap-4 items-center w-full flex-1 px-6">
+      <div className="flex items-center justify-center w-full">
+        <div
+          className="flex items-center cursor-pointer"
           onClick={() => handleCheck(task)}
         >
-          {task.done ? "Done" : "Not Done"}
-        </button>
-        <button
-          className="bg-red-600 px-4 py-2 rounded-md text-white flex-1"
+          {task.done ? (
+            <IoCheckbox className="w-6 h-6 fill-green-700 dark:fill-green-300" />
+          ) : (
+            <IoSquareOutline className="w-6 h-6 fill-gray-500" />
+          )}
+        </div>
+        <p className="flex-1 p-4 mb-1">{task.text}</p>
+      </div>
+
+      <div className="flex gap-3 w-full justify-end items-center">
+        <FaEdit
+          className="w-5 h-5 fill-emerald-800 dark:fill-emerald-300 cursor-pointer"
+          onClick={() => handleEdit(task)}
+        />
+
+        <FaTrashAlt
+          className="w-5 h-5 fill-red-600 dark:fill-red-400 cursor-pointer"
           onClick={() => handleDelete(task)}
-        >
-          Delete
-        </button>
-        <button
-          className="bg-orange-400 px-4 py-2 rounded-md text-white flex-1 "
-          onClick={() => handleEdit(true)}
-        >
-          Edit
-        </button>
+        />
       </div>
     </div>
   );

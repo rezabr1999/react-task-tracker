@@ -2,7 +2,7 @@ import Task from "./Task";
 
 export default function TaskList({ tasks }) {
   return (
-    <div className="flex flex-col gap-6">
+    <div className="flex flex-col gap-2">
       {tasks.map((task) => (
         <Task
           key={task.id}

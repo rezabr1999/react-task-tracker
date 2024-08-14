@@ -12,7 +12,7 @@ function App() {
 
   return (
     <div className={theme === "dark" ? "dark" : ""}>
-      <div className="bg-slate-100 dark:bg-slate-800">
+      <div className="bg-gray-200 dark:bg-slate-600">
         <div className="p-5  min-h-screen flex flex-col gap-10 max-w-3xl mx-auto">
           <ThemeToggleButton />
           <Form />

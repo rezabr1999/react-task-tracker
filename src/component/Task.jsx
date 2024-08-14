@@ -26,7 +26,7 @@ export default function Task({ task }) {
   };
 
   return (
-    <div className="border rounded-md bg-slate-200 dark:bg-slate-700 dark:text-white dark:border-0">
+    <div className="border rounded-md bg-slate-100 dark:bg-slate-700 dark:text-white dark:border-0">
       {isEditing ? (
         <Edit
           updatedTask={updatedText}
