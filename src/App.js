@@ -24,7 +24,7 @@ function App() {
                 <div className="p-5  min-h-screen flex flex-col gap-10 max-w-3xl mx-auto">
                   <ThemeToggleButton />
                   <Form />
-                  <TaskList tasks={tasks} />
+                  <TaskList />
                 </div>
               </>
             }
