@@ -11,13 +11,9 @@ export default function TaskUI({
   handleDelete,
   handleEdit,
 }) {
-  const doneClass = task.done
-    ? "px-4 py-2 bg-green-500 rounded-md flex-1"
-    : "px-4 py-2  bg-red-500 rounded-md flex-1";
-
   return (
-    <div className="flex justify-between gap-4 items-center w-full flex-1 px-6">
-      <div className="flex items-center justify-center w-full">
+    <div className="flex justify-between gap-4 items-center w-full flex-1 px-6 hover:bg-purple-200 hover:rounded-lg  dark:hover:bg-slate-500 cursor-pointer">
+      <div className="flex items-center justify-center">
         <div
           className="flex items-center cursor-pointer"
           onClick={() => handleCheck(task)}
@@ -28,17 +24,16 @@ export default function TaskUI({
             <IoSquareOutline className="w-6 h-6 fill-gray-500" />
           )}
         </div>
-        <p className="flex-1 p-4 mb-1">
-          <Link
-            to={`/task/${task.id}`}
-            className="text-blue-700 hover:text-purple-900 dark:text-blue-300 dark:hover:text-purple-300"
-          >
-            {task.text}
-          </Link>
-        </p>
+
+        <Link
+          to={`/task/${task.id}`}
+          className="flex-1 p-4 mb-1 text-blue-700 hover:text-purple-900 dark:text-blue-300 dark:hover:text-purple-300"
+        >
+          {task.text}
+        </Link>
       </div>
 
-      <div className="flex gap-3 w-full justify-end items-center">
+      <div className="flex gap-3 justify-end items-center m-4">
         <FaEdit
           className="w-5 h-5 fill-emerald-800 dark:fill-emerald-300 cursor-pointer"
           onClick={() => handleEdit(task)}
