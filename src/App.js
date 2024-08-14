@@ -9,14 +9,13 @@ import { Routes, Route } from "react-router-dom";
 
 function App() {
   const theme = useTheme();
-  const tasks = useTask();
 
   return (
     <div className={theme === "dark" ? "dark" : ""}>
       <div className="bg-gray-200 dark:bg-slate-600">
         <Routes>
           <Route
-            path="/"
+            path="/react-task-tracker"
             element={<Home />}
           />
 
