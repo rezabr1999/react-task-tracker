@@ -3,6 +3,8 @@ import { IoSquareOutline } from "react-icons/io5";
 import { FaTrashAlt } from "react-icons/fa";
 import { FaEdit } from "react-icons/fa";
 
+import { Link } from "react-router-dom";
+
 export default function TaskUI({
   task,
   handleCheck,
@@ -26,7 +28,14 @@ export default function TaskUI({
             <IoSquareOutline className="w-6 h-6 fill-gray-500" />
           )}
         </div>
-        <p className="flex-1 p-4 mb-1">{task.text}</p>
+        <p className="flex-1 p-4 mb-1">
+          <Link
+            to={`/task/${task.id}`}
+            className="text-blue-700 hover:text-purple-900 dark:text-blue-300 dark:hover:text-purple-300"
+          >
+            {task.text}
+          </Link>
+        </p>
       </div>
 
       <div className="flex gap-3 w-full justify-end items-center">

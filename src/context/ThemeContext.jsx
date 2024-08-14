@@ -5,6 +5,7 @@ const themeContext = createContext();
 const themeDispatchContext = createContext();
 
 export default function ThemeProvider({ children }) {
+  
   const [theme, themeDispatcher] = useReducer(ThemeReducer, "light");
   return (
     <themeContext.Provider value={theme}>

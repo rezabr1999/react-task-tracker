@@ -2,9 +2,9 @@ import { FaSave } from "react-icons/fa";
 
 export default function Edit({ updatedTask, onEdit, onUpdate }) {
   return (
-    <div className="flex rounded-md bg-white px-6 dark:bg-slate-700 justify-between">
+    <div className="flex rounded-md bg-white px-6 dark:bg-slate-700 justify-between ">
       <input
-        className="flex-1 p-5 outline-none justify-between items-center flex-1 dark:bg-slate-700"
+        className="p-5 outline-none justify-between items-center flex-1 dark:bg-slate-700"
         type="text"
         value={updatedTask}
         onChange={(e) => onEdit(e.target.value)}
