@@ -2,9 +2,7 @@ import "./App.css";
 import { useTask } from "./context/TaskContext";
 import { useTheme } from "./context/ThemeContext";
 
-import Form from "./component/Form";
-import TaskList from "./component/TaskList";
-import ThemeToggleButton from "./component/ThemeToggleButton";
+import Home from "./pages/Home";
 import TaskPage from "./pages/TaskPage";
 
 import { Routes, Route } from "react-router-dom";
@@ -19,15 +17,7 @@ function App() {
         <Routes>
           <Route
             path="/"
-            element={
-              <>
-                <div className="p-5  min-h-screen flex flex-col gap-10 max-w-3xl mx-auto">
-                  <ThemeToggleButton />
-                  <Form />
-                  <TaskList />
-                </div>
-              </>
-            }
+            element={<Home />}
           />
 
           <Route
