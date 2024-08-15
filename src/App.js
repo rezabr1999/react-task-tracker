@@ -4,6 +4,7 @@ import { useTheme } from "./context/ThemeContext";
 
 import Home from "./pages/Home";
 import TaskPage from "./pages/TaskPage";
+import NotFound from "./pages/NotFound";
 
 import { Routes, Route } from "react-router-dom";
 
@@ -22,6 +23,11 @@ function App() {
           <Route
             path="task/:id"
             element={<TaskPage />}
+          />
+
+          <Route
+            path="*"
+            element={<NotFound />}
           />
         </Routes>
       </div>
