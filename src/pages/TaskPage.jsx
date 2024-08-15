@@ -9,7 +9,7 @@ export default function TaskPage() {
   return (
     <div className="min-h-screen p-5">
       <div className="max-w-xs mx-auto">
-        <h1>{task.text}</h1>
+        <h1 className="text-lg dark:text-white">{task.text}</h1>
       </div>
     </div>
   );

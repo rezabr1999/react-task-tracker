@@ -15,7 +15,7 @@ export default function ThemeToggleButton() {
 
   return (
     <button
-      className="flex items-center justify-center py-2 text-center border-black bg-slate-700 dark:bg-yellow-600 rounded-lg text-white w-16"
+      className="mt-4 mb-4 flex items-center justify-center py-2 text-center border-black bg-slate-700 dark:bg-yellow-600 rounded-lg text-white w-16"
       onClick={changeTheme}
     >
       <Icon />
