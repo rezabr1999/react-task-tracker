@@ -1,5 +1,5 @@
 # React Task Tracker
-React Task Tracker is a simple useful tool built with react to keep track of your tasks and to-dos for the day. you can add tasks , edit and delete them. you can also click on any specific task to open the detailed view. 
+React Task Tracker is a simple useful tool built with react to keep track of your tasks and to-dos for the day. you can add tasks , edit and delete them. you can also click on any specific task to open the detailed view. you can also switch to dark or light mode and the app will remember your preference in the next visit!
 
 Check out  [live demo](https://rezabr1999.github.io/react-task-tracker/)  
 Screenshot of the app :
